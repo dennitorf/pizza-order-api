@@ -1,4 +1,5 @@
-﻿using Restaurant.Pizza.Domain.Entities.Sample;
+﻿using Restaurant.Pizza.Domain.Entities;
+using Restaurant.Pizza.Domain.Entities.Sample;
 using Microsoft.EntityFrameworkCore;
 
 namespace Restaurant.Pizza.Persistence.Contexts
@@ -16,5 +17,7 @@ namespace Restaurant.Pizza.Persistence.Contexts
         }        
         public DbSet<Todo> Todos { set; get; }
         public DbSet<TodoItem> TodoItems { set; get; }
+
+        public DbSet<Pizza.Domain.Entities.Pizza> Piza { set; get; }
     }
 }
