@@ -16,7 +16,8 @@ namespace Restaurant.Pizza.Persistence.Contexts
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         }        
         public DbSet<Todo> Todos { set; get; }
-        public DbSet<TodoItem> TodoItems { set; get; }        
+        public DbSet<TodoItem> TodoItems { set; get; }    
+        public DbSet<Order> Orders { set; get; }
         public DbSet<Size> Sizes { set; get; }
         public DbSet<ToppingType> ToppingTypes { set; get; }
         public DbSet<Topping> Toppings { set; get; }

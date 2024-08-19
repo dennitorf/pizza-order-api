@@ -44,10 +44,10 @@ namespace Restaurant.Pizza.Persistence.Seeders
         {
             var sizes = new List<Size>
             {
-                new Size { Code = "small", Description = "Small", Price = 5 },
-                new Size { Code = "medium", Description = "Medium", Price = 7 },
-                new Size { Code = "large", Description = "Large", Price = 8 },
-                new Size { Code = "extra-large", Description = "Extra Large", Price = 9 }
+                new() { Code = "small", Description = "Small", Price = 5 },
+                new() { Code = "medium", Description = "Medium", Price = 7 },
+                new() { Code = "large", Description = "Large", Price = 8 },
+                new() { Code = "extra-large", Description = "Extra Large", Price = 9 }
             };
 
             foreach (var size in sizes)
@@ -64,14 +64,14 @@ namespace Restaurant.Pizza.Persistence.Seeders
         {
             var toppings = new List<Topping>
             {
-                new Topping { Code = "tom", Description = "Tomates", Price = 1, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
-                new Topping { Code = "oni", Description = "Onions", Price = 0.5, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
-                new Topping { Code = "bpe", Description = "Bell pepper", Price = 1, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
-                new Topping { Code = "msh", Description = "Mushrooms", Price = 1.2, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
-                new Topping { Code = "pin", Description = "Pineapple", Price = 0.75, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
-                new Topping { Code = "sau", Description = "Sausage", Price = 1, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "non-veg").Id },
-                new Topping { Code = "pep", Description = "Pepperoni", Price = 2, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "non-veg").Id },
-                new Topping { Code = "bbq", Description = "Barbecue chicken", Price = 3, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "non-veg").Id }
+                new() { Code = "tom", Description = "Tomates", Price = 1, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
+                new() { Code = "oni", Description = "Onions", Price = 0.5M, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
+                new() { Code = "bpe", Description = "Bell pepper", Price = 1, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
+                new() { Code = "msh", Description = "Mushrooms", Price = 1.2M, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
+                new() { Code = "pin", Description = "Pineapple", Price = 0.75M, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "veg").Id },
+                new() { Code = "sau", Description = "Sausage", Price = 1, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "non-veg").Id },
+                new() { Code = "pep", Description = "Pepperoni", Price = 2, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "non-veg").Id },
+                new() { Code = "bbq", Description = "Barbecue chicken", Price = 3, ToppingTypeId = db.ToppingTypes.FirstOrDefault(tt => tt.Code == "non-veg").Id }
             };
 
             foreach (var topping in toppings)
