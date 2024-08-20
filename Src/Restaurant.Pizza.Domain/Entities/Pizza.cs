@@ -7,10 +7,12 @@ namespace Restaurant.Pizza.Domain.Entities
     {
         public Size Size { get; set; }
         public ICollection<Topping> Toppings { get; set; }
-        public double Price { get; set; }
-        public double BeforePrice { get; set; }
+        public decimal Price { get; set; }
+        public decimal BeforePrice { get; set; }
         public int OfferId { get; set; }
         public Offer Offer { get; set; }
+        public int OrderId { get; set; }
+        public Order Order { get; set; }
 
     }
 }

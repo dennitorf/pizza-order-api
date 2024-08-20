@@ -34,6 +34,17 @@ namespace Restaurant.Pizza.WebApi
             services.AddApplication();
             services.AddInfrastructure(Configuration);
 
+            //add CORS policy
+            services.AddCors(options => 
+            {
+                options.AddPolicy("AllowAngularApp", builder => 
+                {
+                    builder.WithOrigins("http://localhost:4200")
+                       .AllowAnyHeader()
+                       .AllowAnyMethod();
+                });
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -59,6 +70,8 @@ namespace Restaurant.Pizza.WebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("AllowAngularApp");
 
             app.UseAuthorization();
 

@@ -25,6 +25,11 @@ namespace Restaurant.Pizza.Persistence.Configurations
             builder.HasOne(p => p.Offer)
                 .WithMany()
                 .HasForeignKey(p => p.OfferId);
+            
+            builder.HasOne(p => p.Order)
+                .WithMany(o => o.Pizzas)
+                .HasForeignKey(p => p.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Configuring the many-to-many relationship between Pizza and Topping
             builder.HasMany(p => p.Toppings)
